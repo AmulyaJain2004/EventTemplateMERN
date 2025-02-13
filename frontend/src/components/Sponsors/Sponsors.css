@@ -1,0 +1,48 @@
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.sponsors-container {
+    background: linear-gradient(to bottom, #1A334A, #1E536E);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.sponsors-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.logos {
+  overflow: hidden;
+  width: 100%;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logos-slides {
+  display: flex;
+  animation: slide 25s linear infinite;
+}
+
+.sponsor-logo {
+  height: 50px;
+  margin: 0 40px;
+  transition: transform 0.3s ease;
+}
+
+.logos:hover .logos-slides {
+  animation-play-state: paused;
+}

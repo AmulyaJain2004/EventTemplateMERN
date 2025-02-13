@@ -1,0 +1,85 @@
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+#timeline {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+#timeline h2 {
+  font-size: 2.5rem; 
+  @media (max-width: 768px) {
+    font-size: 2rem; 
+  }
+}
+
+.timeline-container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: #00bfff;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  @media (max-width:768px) {
+    display: none;
+  }
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  flex-direction: column; 
+  @media (min-width: 768px) {
+    flex-direction: row; 
+  }
+}
+
+.timeline-item.left .content,
+.timeline-item.right .content {
+  width: 100%;
+  background: #222;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: left; 
+  @media (min-width: 768px) {
+    width: 45%; 
+    text-align: right; 
+  }
+}
+
+.timeline-item.right .content {
+  text-align: left; 
+}
+
+.timeline-item .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+  
+  @media (min-width: 768px) {
+    width: 45%; 
+    margin-top: 0; 
+  }
+}
+
+.timeline-item .icon img {
+  width: 100px;
+  height: auto;
+  @media (min-width: 768px) {
+    width: 150px; 
+  }
+}
