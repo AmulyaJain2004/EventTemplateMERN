@@ -3,6 +3,7 @@ import Event from '../models/eventsModel.js';
 
 const eventsRouter = express.Router();
 
+// PUT
 // Create a new event
 eventsRouter.post('/', async (request, response) => {
     try {
@@ -24,6 +25,7 @@ eventsRouter.post('/', async (request, response) => {
     }
 });
 
+// GET
 // Get all events
 eventsRouter.get('/', async (request, response) => {
     try {
@@ -39,6 +41,7 @@ eventsRouter.get('/', async (request, response) => {
     }
 });
 
+// GET
 // Get a single event by ID
 eventsRouter.get('/:id', async (request, response) => {
     try {
@@ -56,6 +59,7 @@ eventsRouter.get('/:id', async (request, response) => {
     }
 });
 
+// PATCH
 // Update an event by ID
 eventsRouter.put('/:id', async (request, response) => {
     try {
@@ -73,6 +77,7 @@ eventsRouter.put('/:id', async (request, response) => {
     }
 });
 
+// DELETE
 // Delete an event by ID
 eventsRouter.delete('/:id', async (request, response) => {
     try {

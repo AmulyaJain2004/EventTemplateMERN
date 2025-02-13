@@ -2,6 +2,7 @@ import express, { request, response } from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import eventsRouter from './routes/eventsRoute.js';
+import hackathonRouter from "./routes/hackathonRoute.js";
 import { PORT, mongoDBURL } from './config.js';
 
 const app = express();
@@ -18,6 +19,7 @@ app.get('/', (request, response) => {
 
 // Routes
 app.use('/api/events', eventsRouter);
+app.use('/api/hackathon', hackathonRouter);
 
 mongoose
     .connect(mongoDBURL)
